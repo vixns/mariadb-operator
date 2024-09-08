@@ -335,7 +335,7 @@ metadata:
     categories: Database
     certified: "true"
     containerImage: mariadb/mariadb-operator-enterprise:v0.0.31-dev
-    createdAt: "2024-09-04T11:49:37Z"
+    createdAt: "2024-09-08T12:44:55Z"
     features.operators.openshift.io/disconnected: "false"
     features.operators.openshift.io/fips-compliant: "false"
     features.operators.openshift.io/proxy-aware: "false"
@@ -344,7 +344,7 @@ metadata:
     features.operators.openshift.io/token-auth-azure: "false"
     features.operators.openshift.io/token-auth-gcp: "false"
     operators.openshift.io/valid-subscription: '["MariaDB Enterprise Server License"]'
-    operators.operatorframework.io/builder: operator-sdk-v1.34.1
+    operators.operatorframework.io/builder: operator-sdk-v1.35.0
     operators.operatorframework.io/project_layout: go.kubebuilder.io/v4
     support: MariaDB Corporation
   labels:
@@ -399,6 +399,9 @@ spec:
             x-descriptors:
               - urn:alm:descriptor:com.tectonic.ui:number
               - urn:alm:descriptor:com.tectonic.ui:advanced
+          - description: Compression algorithm to be used in the Backup.
+            displayName: Compression
+            path: compression
           - description: Databases defines the logical databases to be backed up. If not provided, all databases are backed up.
             displayName: Databases
             path: databases
